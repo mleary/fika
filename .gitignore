@@ -37,6 +37,5 @@ scratch.Rmd
 #########################################
 *.utf8.md
 *.knit.md
-docs/
 .RData
 .Rproj.user

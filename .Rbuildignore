@@ -1,8 +1,7 @@
-^fika\.Rproj$
+^learylib\.Rproj$
 ^\.Rproj\.user$
-^README\.Rmd$
 ^LICENSE\.md$
-^data-raw$
+^README\.Rmd$
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
