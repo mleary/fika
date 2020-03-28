@@ -1,12 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# fika
+# fika <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build
+status](https://travis-ci.org/mleary/fika.svg?branch=master)](https://travis-ci.org/mleary/fika)
 <!-- badges: end -->
 
 The *fika* package is designed to easily connect people from within a
@@ -55,13 +57,13 @@ dat <- data.frame(
 
 fika::create_groups(dat, min_group_size = 3)
 #>     name Group
-#> 1  Steve     3
-#> 2  Kathy     2
-#> 3    Tim     3
-#> 4  Terry     1
-#> 5   Erin     2
-#> 6  Emily     2
-#> 7   Gail     1
+#> 1  Steve     2
+#> 2  Kathy     1
+#> 3    Tim     2
+#> 4  Terry     2
+#> 5   Erin     1
+#> 6  Emily     3
+#> 7   Gail     3
 #> 8  Robin     3
 #> 9  Denny     1
 #> 10 Marge     1

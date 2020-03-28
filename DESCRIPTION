@@ -1,18 +1,21 @@
 Package: fika
-Title: Simple Tools for Organizing Fika Groups & Topics
-Version: 0.0.0.9000
+Title: Simple tools for organizing fika groups & topics
+Version: 0.0.1
 Authors@R: 
     person(given = "Matt",
            family = "Leary",
            role = c("aut", "cre"),
            email = "matt.leary@protonmail.com")
-Description: `fika` is a package is to help organize large groups into smaller Fikas &
-    suggest topics of discussion.
+Description: `fika` is a package is to help organize large groups into smaller 
+    groups & suggest topics of discussion.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
     dplyr,
-    magrittr,
-    rstudioapi
+    magrittr
 RoxygenNote: 7.0.2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

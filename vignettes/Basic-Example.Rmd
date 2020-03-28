@@ -1,0 +1,73 @@
+---
+title: "Basic Example"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Basic Example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+ 
+## Example setup 
+
+```{r setup}
+library(fika)
+
+```
+
+
+## Get participant data
+
+You can source the data anyway you want, via spreadsheet, googlesheets, database,
+etc.  The only requirement is you create a dataframe, even if it is only one column.
+
+```{r}
+people_in_group <-data.frame(
+  people = c("Steve", "Kathy", "Tim", "Terry", "Erin", "Emily", "Gail", "Robin", 
+           "Denny", "Marge", "Elizabeth", "Darrell"),
+  email = rep("fakeemail@gmail.com", 12)
+)
+
+```
+
+## Create topics
+
+Note that the Fika package comes with some suggested topics.  Use the `topics()` 
+function to see all the suggested topics.  
+
+```{r}
+topics <- fika::topics
+topics[1:2]
+
+```
+
+## Add topics
+You can add on addtional topics via the `topic_add()` function. Or hey, just 
+create your own topics list or ignore it all together.
+
+```{r}
+fika::topic_add(topics[1:2], "Favorite restaurant in your town and why?")
+```
+
+## Create groups & topics 
+
+Create groups based on the number of people and the min group size you desire.
+If you want, you can also create a corresponding topic for each group.
+
+**Please note** that create_groups takes a data frame object.
+
+```{r}
+df.groups <- fika::create_groups(people_in_group,
+                                min_group_size = 3)
+
+topics <- fika::create_topics(group_nums = 4, topics)
+```
+
+
+

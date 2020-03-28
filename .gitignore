@@ -39,3 +39,4 @@ scratch.Rmd
 *.knit.md
 .RData
 .Rproj.user
+inst/doc
